@@ -79,3 +79,31 @@ html, body{
     background-color: yellowgreen;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 844px) {
+
+    .ptop{
+        flex-direction: column;
+        height: fit-content;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 1.5vh;
+        padding: 3vh 0;
+    }
+
+    .hitval{
+        margin-left: 4vh;
+    }
+
+    .panel{
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .bubble{
+        width: 60px;
+        height: 60px;
+    }
+}
