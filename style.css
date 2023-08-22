@@ -6,6 +6,22 @@
     font-family: 'VT323', monospace;
 }
 
+:root{
+    --top:rgb(94, 107, 245);
+    --box:#f75842;
+    --box1:rgb(230, 94, 237);
+    --btm:rgba(109, 57, 182, 0.536);
+    --bubble: #e6bd29;
+}
+
+.dark-theme{
+    --top:rgb(230, 94, 237);
+    --box:#5656ff;
+    --box1:#1f0d70;
+    --btm:rgba(109, 57, 182, 0.536);
+    --bubble: #e6bd29;
+}
+
 html,
 body {
     width: 100%;
@@ -14,8 +30,7 @@ body {
 
 .bg-image {
     /* The image used */
-    background-image: url("bg8.jpg");
-
+    background-image: url("night.png");
     /* Add the blur effect */
     filter: blur(2px);
     -webkit-filter: blur(2px);
@@ -65,7 +80,7 @@ body {
     color: white;
     height: 100px;
     width: 100%;
-    background-color: rgb(94, 107, 245);
+    background-color: var(--top);
     justify-content: space-around;
 }
 
@@ -80,21 +95,40 @@ body {
     border: 3px solid black;
     font-weight: 600;
     padding: 1vh 2vh;
-    background-color: #f75842;
+    background-color: var(--box);
     border-radius: 5px;
+}
+
+.box1 {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    border: 3px solid black;
+    font-weight: 600;
+    padding: 1vh 2vh;
+    width: 7vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vh;
+    background-color: var(--box1);
+    border-radius: 5px;
+}
+
+.box1:hover{
+    cursor: pointer;
 }
 
 .pbtm {
     padding: 20px;
     width: 100%;
-    /* height: calc(100% - 100px); */
+    height: calc(100% - 100px);
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border: 3px solid black;
-    background-color: rgba(109, 57, 182, 0.536);
+    background-color: var(--btm);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -106,19 +140,23 @@ body {
     font-size: 4vh;
     width: 7vh;
     height: 7vh;
-    background-color: #e6bd29;
+    background-color: var(--bubble);
     border: 2px black solid;
     color: black;
     border-radius: 50%;
 }
 
 .bubble:hover {
-    background-color: #f75842;
+    background-color: var(--box);
     cursor: pointer;
 }
 
 .over{
     font-size: 7vh;
+}
+
+img{
+    width: 4vh;
 }
 
 @media only screen and (max-width: 600px) {
@@ -129,7 +167,6 @@ body {
         justify-content: space-around;
         align-items: center;
         width: 100%;
-        gap: 1.5vh;
         padding: 2vh 0;
     }
 
@@ -141,7 +178,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        padding: 1vh 1vh;
+        /* justify-content: space-evenly; */
         /* width: 60%; */
     }
 

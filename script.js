@@ -62,6 +62,25 @@ document.querySelector(".pbtm").addEventListener("click", function (dets) {
       getNewHit();
       makeBubble();
    }
+})
+
+var box1 = document.querySelector(".box1");
+var icon = document.querySelector(".icon");
+var bg = document.querySelector(".bg-image");
+
+box1.addEventListener("click", function() {
+   console.log("working")
+   document.body.classList.toggle("dark-theme");
+   if(document.body.classList.contains("dark-theme"))
+   {
+      icon.src="half-moon.png";
+      bg.style.backgroundImage = "url('pink.jpg')";
+
+   }
+   else{
+      icon.src="cloud.png";
+      bg.style.backgroundImage = "url('night.png')";
+   }
 
 })
 
