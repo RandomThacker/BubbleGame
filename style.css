@@ -7,7 +7,7 @@
 }
 
 :root{
-    --top:rgb(94, 107, 245);
+    --top:rgb(106, 23, 190);
     --box:#f75842;
     --box1:rgb(230, 94, 237);
     --btm:rgba(109, 57, 182, 0.536);
@@ -16,7 +16,7 @@
 
 .dark-theme{
     --top:rgb(230, 94, 237);
-    --box:#5656ff;
+    --box:#7979ff;
     --box1:#1f0d70;
     --btm:rgba(109, 57, 182, 0.536);
     --bubble: #e6bd29;
@@ -76,7 +76,8 @@ body {
     border-left: 3px solid black;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    align-items: center;
+    align-items: flex-start;
+    just
     color: white;
     height: 100px;
     width: 100%;
@@ -107,7 +108,6 @@ body {
     font-weight: 600;
     padding: 1vh 2vh;
     width: 7vh;
-    align-items: center;
     justify-content: center;
     font-size: 2vh;
     background-color: var(--box1);
@@ -153,6 +153,7 @@ body {
 
 .over{
     font-size: 7vh;
+    color: white;
 }
 
 img{
@@ -179,6 +180,7 @@ img{
         flex-direction: column;
         align-items: center;
         padding: 1vh 1vh;
+        height: 11vh;
         /* justify-content: space-evenly; */
         /* width: 60%; */
     }
