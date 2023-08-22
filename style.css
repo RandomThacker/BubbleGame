@@ -1,109 +1,158 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    font-family: 'VT323', monospace;
 }
 
-html, body{
+html,
+body {
     width: 100%;
     height: 100%;
-} 
+}
 
-.main{
+.bg-image {
+    /* The image used */
+    background-image: url("bg8.jpg");
+
+    /* Add the blur effect */
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: rgb(179, 223, 179);
+    /* background-color: rgb(179, 223, 179); */
     display: flex;
     align-items: center;
     justify-content: center;
     display: flex;
+    z-index: 2;
+
 }
 
-.panel{
+.panel {
     width: 80%;
-    height: 80%;
-    background-color: rgb(255, 255, 255);
+    height: 85%;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.ptop{
+.ptop {
+    font-size: 25px;
     padding: 10px;
     display: flex;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     align-items: center;
     color: white;
     height: 100px;
     width: 100%;
-    background-color: rgb(97, 163, 97); 
-    justify-content: space-around;  
+    background-color: rgb(94, 107, 245);
+    justify-content: space-around;
 }
 
-.elem{
+.elem {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.box{
+.box {
     color: black;
+    border: 3px solid black;
     font-weight: 600;
-    padding: 10px 20px;
-    background-color: white;
+    padding: 1vh 2vh;
+    background-color: #f75842;
     border-radius: 5px;
 }
 
-.pbtm{
+.pbtm {
     padding: 20px;
     width: 100%;
-    height: calc(100% - 100px);
+    /* height: calc(100% - 100px); */
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border: 3px solid black;
+    background-color: rgba(109, 57, 182, 0.536);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.bubble{
+.bubble {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgb(72, 104, 72);
-    color: white;
+    font-size: 4vh;
+    width: 7vh;
+    height: 7vh;
+    background-color: #e6bd29;
+    border: 2px black solid;
+    color: black;
     border-radius: 50%;
 }
 
-.bubble:hover{
-    background-color: yellowgreen;
+.bubble:hover {
+    background-color: #f75842;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 844px) {
+.over{
+    font-size: 7vh;
+}
 
-    .ptop{
-        flex-direction: column;
-        height: fit-content;
-        justify-content: space-between;
+@media only screen and (max-width: 600px) {
+
+    .ptop {
+        flex-direction: row;
+        height: 15vh;
+        justify-content: space-around;
         align-items: center;
         width: 100%;
         gap: 1.5vh;
-        padding: 3vh 0;
+        padding: 2vh 0;
     }
 
-    .hitval{
-        margin-left: 4vh;
+    .pbtm{
+        height: calc(95vh - 15vh);
     }
 
-    .panel{
-        height: 100%;
-        width: 100%;
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        /* width: 60%; */
+    }
+
+    .panel {
+        height: 95%;
+        width: 90%;
         border-radius: 0;
     }
 
-    .bubble{
-        width: 60px;
-        height: 60px;
+    .bubble {
+        width: 6.5vh;
+        height: 6.5vh;
     }
 }
