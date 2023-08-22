@@ -8,7 +8,7 @@ function makeBubble() {
 
    if (mediaQuery.matches) {
       console.log("300")
-      for (var i = 1; i < 41; i++) {
+      for (var i = 1; i < 37; i++) {
          var rn = Math.floor(Math.random() * 10)
          clutter += `<div class="bubble">${rn}</div>`
       }
